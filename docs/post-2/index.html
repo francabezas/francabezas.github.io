@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>2 - Mecanizado CNC - Francisca Cabezas - Taller Fabricación 2021</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://francabezas.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.a32658f2eedb9bb852f8513925cb445e40633983f1ff54349b037dd04eafa2fa.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://francabezas.github.io"><img alt="Logo" src="/images/logo-uai.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://francabezas.github.io"><img alt="Logo" src="/images/logo-uai.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-0/">0 - Fabricación Digital</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-1/">1 - Planimetrías</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://francabezas.github.io/docs/post-2/">2 - Mecanizado CNC</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">2 - Mecanizado CNC</h1>
+<div class="content ">
+  <p>Para este encargo se nos pidió realizar el tutorial de mecanizado CNC de la Silla Fresia, el cual se realiza en el programa Fusion 360.</p>
+<hr>
+<h1 id="qué-es-mecanizado-cnc">¿Qué es Mecanizado CNC?</h1>
+<p>Fecha: Martes 06-07-2021</p>
+<p><img src="/img/Post2/Mecanizado_CNC.jpg" alt="Imagen Simple"></p>
+<p>Gracias a que se desarrolló la computadora electrónica en los años 40, es que se pudo sentar las bases del control numérico computarizado, o también conocido, CNC. En 1952, el Instituto Tecnológico de Massachusetts y John C. Parson, desarrollaron la primera máquina operando mediante CNC. Es un híbrido entre el componente electromecánico de las máquinas-herramientas empleadas en el mecanizado por decoletaje, pero automático. Esto genera mayor productividad en menor tiempo y con una elevada precisión puesto que la intervención humana se ve reducida.</p>
+<p>En resumen, son máquinas-herramientas automatizadas que se controlan por ordenador. Mediante herramientas rotativas de múltiples filos de corte y con poquísima intervención humana, pueden llevar a cabo diferentes operaciones sobre una pieza.</p>
+<hr>
+<h1 id="silla-fresia">Silla Fresia</h1>
+<h2 id="pasos-a-seguir---partes-de-la-silla">Pasos a seguir - partes de la silla</h2>
+<ol>
+<li>Plancha de trabajo</li>
+</ol>
+<p>Debemos crear una plancha de trabajo de 1220 mm x 1220 mm con un espesor de 15 mm.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Paso1.mov"  type="video/mp4">
+    </video>
+</div>
+<ol start="2">
+<li>Copiar piezas</li>
+</ol>
+<p>Paso siguiente es copiar las piezas de la silla y acomodarlas en la plancha de trabajo. Para esto debemos ir a <code>Modify --&gt; Align</code>, luego seleccionar primero el lado de la pieza que queremos que esté en la base de la plancha. Repetir este paso con el otro lado de la pieza.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Ojo: Hay que asegurarse que las piezas queden a la misma altura, es decir, que 
+ambas estén alineadas con la base de la plancha, porque puede pasar que se monte 
+una pieza sobre otra.
+</code></pre></div><p><div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Paso2_1.mov"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Paso2_2.mov"  type="video/mp4">
+    </video>
+</div></p>
+<ol start="3">
+<li>Manufactura</li>
+</ol>
+<p>Ahora hay que seleccionar la opción de <code>Manufacture --&gt; Set Up</code> hay que escoger la máquina a utilizar la cual en este caso en <code>Autodesk Generic 3-axis</code>, donde aparece Stock hay que elegir From soild. Además, hay que escoger los modelos que en este caso son las piezas que queremos cortar.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Ojo: Hay que asegurarse que la orientación de la plancha sea la correcta, debe 
+estar en orientación Select Z axis/plane &amp; x axis
+</code></pre></div><div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Paso3.mov"  type="video/mp4">
+    </video>
+</div>
+<ol start="4">
+<li>Contorno 2D interno</li>
+</ol>
+<p>Después debemos realizar 2D Contour, para esto hay que seleccionar las líneas inferiores del lugar donde se quiere hacer el corte, escoger la máquina que mencionamos anteriormente.</p>
+<ol start="5">
+<li>Contorno 2D Pocket</li>
+</ol>
+<p>Ahora hay que elaborar el 2D Pocket Contour, nos aseguramos que la máquina que está escogida es la misma que antes y seleccionamos la zona que queremos cortar.</p>
+<ol start="6">
+<li>Contorno 2D externo</li>
+</ol>
+<p>Debemos volver a seleccionar el 2D Contour, pero esta vez lo vamos a utilizar para el exterior de la pieza. Escogemos las líneas por donde queremos que la máquina corte. Puesto que este corte hace que la pieza se separe de la plancha, puedo ocurrir que se mueva y termine cortando mal o arruinado la pieza. Para que lo anterior no suceda debemos agregar Tabs, la altura de estas será de 3mm y la distancia entre cada ellas de 350 mm.</p>
+<p>Para los pasos 4, 5 y 6:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Ojo: En Multiple depths donde dice Maximum Roughing Stepdown los milímetros 
+deben ser 3 y no 1.
+</code></pre></div><hr>
+<h2 id="pasos-a-seguir---asiento">Pasos a seguir - asiento</h2>
+<p>En cuanto al asiento de la silla hay que realizarle un trazado, esto es para que esa pieza tenga la flexibilidad que se necesita, los pasos a seguir son muy parecidos a los anteriores (el 1, 2 y 3 son similares solo cambia en el paso 1 los milímetros de altura de la plancha, en vez de 15mm son 9mm), por lo que no los volveré a escribir. Asimismo, se realiza el paso número 6 antes de hacer el 2D Trace</p>
+<ul>
+<li>2D Trace</li>
+</ul>
+<p>Con el 2D Tracer debemos seleccionar las curvas internas que tiene el asiento para que la máquina de corte pase por ahí. Hay que modificar los milímetros del Stock to Leave, deben ser 4,5 mm.</p>
+<hr>
+<h2 id="videos-extras">Videos extras</h2>
+<hr>
+<h1 id="planimetría">Planimetría</h1>
+<p><img src="/img/Post2/Plani-01.png" alt="Imagen Simple">
+<img src="/img/Post2/Plani-02.png" alt="Imagen Simple">
+<img src="/img/Post2/Plani-03.png" alt="Imagen Simple">
+<img src="/img/Post2/Plani-04.png" alt="Imagen Simple">
+<img src="/img/Post2/Plani-05.png" alt="Imagen Simple">
+<img src="/img/Post2/Explotada.png" alt="Imagen Simple"></p>
+<div>
+    <iframe 
+    src='https://alumnos4820.autodesk360.com/shares/public/SH919a0QTf3c32634dcfd2f7448cbf8b7dca?mode=embed'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<hr>
+<p>Fuentes:</p>
+<ul>
+<li><a href="https://umesal.com/que-es-el-mecanizado-cnc/">https://umesal.com/que-es-el-mecanizado-cnc/</a></li>
+</ul>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
