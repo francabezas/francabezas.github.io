@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>3 - Mecanizado 2.5 Ejes - Francisca Cabezas - Taller Fabricación 2021</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://francabezas.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.a32658f2eedb9bb852f8513925cb445e40633983f1ff54349b037dd04eafa2fa.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://francabezas.github.io"><img alt="Logo" src="/images/logo-uai.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://francabezas.github.io"><img alt="Logo" src="/images/logo-uai.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-0/">0 - Fabricación Digital</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-1/">1 - Planimetrías</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-2/">2 - Mecanizado CNC</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-2-grupal/">2 - Mecanizado CNC - Grupal</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://francabezas.github.io/docs/post-3/">3 - Mecanizado 2.5 Ejes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/post-4/">4 - Simulación &amp; Diseño Generativo</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://francabezas.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">3 - Mecanizado 2.5 Ejes</h1>
+<div class="content ">
+  <p>Para este encargo se nos pidió realizar el tutorial de Desbaste CNC, el cual vamos a aplicar al respaldo de la Silla Fresia que utilizamos en el encargo 2 – Mecanizado CNC.</p>
+<hr>
+<h2 id="recordemos-qué-es-cnc">Recordemos qué es CNC</h2>
+<p><img src="/img/Post3/Mecanizado.png" alt="Imagen Simple"></p>
+<p>En pocas palabras, son máquinas-herramientas automatizadas que se controlan por ordenador. Mediante herramientas rotativas de múltiples filos de corte y con poquísima intervención humana, pueden llevar a cabo diferentes operaciones sobre una pieza.</p>
+<hr>
+<h3 id="mecanizado-25-ejes">Mecanizado 2.5 Ejes</h3>
+<p><img src="/img/Post3/Mecanizado_2_5.jpeg" alt="Imagen Simple"></p>
+<p>Son un conjunto de operaciones que se pueden utilizar en centros de mecanizado 2.5 ejes y 3 ejes. Con el objetivo de fabricar piezas de diferentes materiales, moviendo la máquina en las coordenadas X e Y a la vez durante el corte del material o arranque de viruta.</p>
+<p>En este mecanizado la máquina se puede mover en 3 ejes (X – Y – Z), sin embargo, nunca se moverá en las 3 coordenadas a la vez durante el proceso de corte.</p>
+<p>Este tipo de estrategia se utiliza cuando se quiere desbastar grandes cantidades de material de forma uniforme y se quiere realizar mecanizados rápidos en piezas con geometría simple. Así también, se usan en superficies curvadas cuando el acabado superficial no es crítico, como veremos más adelante. Además, se utiliza para acabados de paredes en 2.5 ejes cuando no se necesita un acabado superficial muy fino.</p>
+<hr>
+<h3 id="pasos-a-seguir-desbaste">Pasos a seguir Desbaste</h3>
+<h5 id="paso-1-exportar-respaldo">Paso 1: Exportar respaldo</h5>
+<p>Convertir el respaldo en un componente a partir de un cuerpo <code>Create a Components from Bodies</code> . Luego debemos exportar ese componente y hacer un “Upload”, para después abrirlo en una ventana aparte.</p>
+<p><img src="/img/Post3/Paso1.png" alt="Imagen Simple"></p>
+<h5 id="paso-2-alinear">Paso 2: Alinear</h5>
+<p>Mover el respaldo al origen del plano y alinearlo  <code>Aling</code>para que quede perpendicular a la superficie.</p>
+<p><img src="/img/Post3/Paso2.png" alt="Imagen Simple"></p>
+<p><img src="/img/Post3/Paso2_1.png" alt="Imagen Simple"></p>
+<h5 id="paso-3-bloque">Paso 3: Bloque</h5>
+<p>Crear un Sketch para hacer el bloque que va a contener el respaldo. Debemos hacer un rectángulo que pase todos los lados del respaldo, luego hacer un <code>Extrude</code>, dejando todo el respaldo dentro de este bloque. Luego le bajamos la opacidad a un 20% para poder ver dentro de este.</p>
+<p><code>Ojo: Al crear el bloque hay que preocuparse que donde dice operación aparezca “New Body”</code></p>
+<p><img src="/img/Post3/Paso3.png" alt="Imagen Simple"></p>
+<p><img src="/img/Post3/Paso3_1.png" alt="Imagen Simple"></p>
+<h5 id="paso-4-manufactura">Paso 4: Manufactura</h5>
+<p>Pasamos al modo de <code>Manufacture</code> y debemos hacer el <code>Set up</code></p>
+<p>Hay que seleccionar la máquina con la cual vamos a trabajar, en este caso “Autodesk Generic 3-axis”, donde aparece Stock hay que elegir From soild. Además, hay que escoger los modelos que en este caso son las piezas que queremos cortar.</p>
+<p><code>Ojo: Hay que asegurarse que la orientación de la plancha sea la correcta, debe estar en orientación Select Z axis/plane &amp; x axis</code></p>
+<p><img src="/img/Post3/Paso4.png" alt="Imagen Simple"></p>
+<p><img src="/img/Post3/Paso4_1.png" alt="Imagen Simple"></p>
+<h5 id="paso-5-project">Paso 5: Project</h5>
+<p>Debemos volver un poco atrás, e ir al mode <code>Design</code>para hacer un Sketch nuevo en el plano superior del Stock. Hay que hacer <code>Project</code> desde la vista Top, en donde hay que seleccionar el respaldo para que se haga un rectángulo en la superficie del Stock.</p>
+<p><img src="/img/Post3/Paso5.png" alt="Imagen Simple"></p>
+<h5 id="paso-6-desbaste">Paso 6: Desbaste</h5>
+<p>Volvemos al modo Manufacture para empezar a trabajar en el <code>Adaptive Clearing</code>, esto es como una limpieza o desbaste adaptativo, es decir, remover material para optimizar el procedimiento de obtención de la superficie.</p>
+<p>Hay que seleccionar la máquina con la cual vamos a trabajar, es una Fresia de 6 mm. En la Geometría vamos a seleccionar la figura que hicimos en el paso anterior, y en donde aparece Model vamos a escoger el respaldo. Por último, en Passes hay que reducir el <code>Optimal Load</code> a 3 mm.</p>
+<p><img src="/img/Post3/Paso6.png" alt="Imagen Simple"></p>
+<p><img src="/img/Post3/Paso6_1.png" alt="Imagen Simple"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Simulacion.mp4"  type="video/mp4">
+    </video>
+</div>
+<h5 id="paso-7-terminación-paralela">Paso 7: Terminación paralela</h5>
+<p>En la Geometría vamos a seleccionar la figura que hicimos en el paso 4, y en donde aparece Model vamos a escoger el respaldo.</p>
+<p><img src="/img/Post3/Paso7.png" alt="Imagen Simple"></p>
+<p><img src="/img/Post3/Paso7_1.png" alt="Imagen Simple"></p>
+<p>Ahora vamos a duplicar la operación paralela y editarla, porque una vez realizada para en una dirección debemos hacerla otra vez pero en la otra dirección, es decir, si lo hicimos en la dirección X esta segunda vez debemos realizarlo en Y.</p>
+<p>En los Passes debemos cambiar el <code>Pass Direction</code> a 90º y en <code>Stepover</code>hay que poner 2 mm para una mayor resolución.</p>
+<p><img src="/img/Post3/Paso7_2.png" alt="Imagen Simple"></p>
+<p><img src="/img/Post3/PasoFinal.png" alt="Imagen Simple"></p>
+<p>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso1.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso1.png" alt="Paso1" />
+				    </div>
+			      <figcaption>
+		          <p>Paso1</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso2.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso2.png" alt="Paso2" />
+				    </div>
+			      <figcaption>
+		          <p>Paso2</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso2_1.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso2_1.png" alt="Paso2 1" />
+				    </div>
+			      <figcaption>
+		          <p>Paso2 1</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso2_1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso3.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso3.png" alt="Paso3" />
+				    </div>
+			      <figcaption>
+		          <p>Paso3</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso3.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso3_1.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso3_1.png" alt="Paso3 1" />
+				    </div>
+			      <figcaption>
+		          <p>Paso3 1</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso3_1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso4.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso4.png" alt="Paso4" />
+				    </div>
+			      <figcaption>
+		          <p>Paso4</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso4.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso4_1.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso4_1.png" alt="Paso4 1" />
+				    </div>
+			      <figcaption>
+		          <p>Paso4 1</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso4_1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso5.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso5.png" alt="Paso5" />
+				    </div>
+			      <figcaption>
+		          <p>Paso5</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso5.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso6.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso6.png" alt="Paso6" />
+				    </div>
+			      <figcaption>
+		          <p>Paso6</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso6.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso6_1.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso6_1.png" alt="Paso6 1" />
+				    </div>
+			      <figcaption>
+		          <p>Paso6 1</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso6_1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7.png" alt="Paso7" />
+				    </div>
+			      <figcaption>
+		          <p>Paso7</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7_1.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7_1.png" alt="Paso7 1" />
+				    </div>
+			      <figcaption>
+		          <p>Paso7 1</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7_1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7_2.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7_2.png" alt="Paso7 2" />
+				    </div>
+			      <figcaption>
+		          <p>Paso7 2</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//Paso7_2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria2_Post3//PasoFinal.png');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria2_Post3//PasoFinal.png" alt="Paso final" />
+				    </div>
+			      <figcaption>
+		          <p>Paso final</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria2_Post3//PasoFinal.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+<hr>
+<h3 id="cómo-corregir-el-error-de-la-máquina">Cómo corregir el error de la máquina</h3>
+<p>Durante las simulaciones que se hicieron en las diferentes operaciones de los pasos 6 y 7 aparece en cierto sector de la silla un color rojo, esto quiere decir que la máquina que se esta usando está topando con el bloque, por lo que en la realidad esto no funcionaría. Es por esto que hay que editar la máquina que estamos usando y alargar el <code>Length below holder</code>y dejarlo en 40 mm. Por último, hay que cambiar la máquina en las 3 operaciones que hicimos antes (1 Adaptive Clearing y 2 Parallel).</p>
+<p>Es importante arreglar este error puesto que la máquina puede salir perjudicada o el bloque.</p>
+<p><img src="/img/Post3/Error.png" alt="Imagen Simple"></p>
+<p><code>Ojo: Cuando se cambia la máquina hay que volver a cambiar el Optimal Load a 3 mm. Y el Stepover</code></p>
+<hr>
+<h3 id="modelo-fusion-360-silla-fresia">Modelo Fusion 360 Silla Fresia</h3>
+<div>
+    <iframe 
+    src='https://alumnos4820.autodesk360.com/shares/public/SH919a0QTf3c32634dcfd2f7448cbf8b7dca?mode=embed'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<h3 id="modelo-fusion-360-respaldo">Modelo Fusion 360 Respaldo</h3>
+<div>
+    <iframe 
+    src='https://alumnos4820.autodesk360.com/shares/public/SH919a0QTf3c32634dcfd3351b1978f5b39b?mode=embed'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<hr>
+<h3 id="fotos-en-la-realidad">Fotos en la realidad</h3>
+<p><code>Proceso de Desbaste</code></p>
+<p><img src="/img/Post3/1_Desbaste.jpg" alt="Imagen Simple"></p>
+<p><code>Proceso Paralelo</code></p>
+<p><img src="/img/Post3/2_Paralelo.jpg" alt="Imagen Simple"></p>
+<p><code>Respaldo terminado</code></p>
+<p><img src="/img/Post3/3_Respaldo.jpg" alt="Imagen Simple"></p>
+<p><code>Armado respaldo de la silla</code></p>
+<p><img src="/img/Post3/4_Armado.jpg" alt="Imagen Simple"></p>
+<p><code>Silla terminada</code></p>
+<p><img src="/img/Post3/5_Silla.jpg" alt="Imagen Simple"></p>
+<p><code>Silla terminada</code></p>
+<p><img src="/img/Post3/6_Silla.jpg" alt="Imagen Simple"></p>
+<p>
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria_Post3//1_Desbaste.jpg');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria_Post3//1_Desbaste.jpg" alt="1 desbaste" />
+				    </div>
+			      <figcaption>
+		          <p>1 desbaste</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria_Post3//1_Desbaste.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria_Post3//2_Paralelo.jpg');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria_Post3//2_Paralelo.jpg" alt="2 paralelo" />
+				    </div>
+			      <figcaption>
+		          <p>2 paralelo</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria_Post3//2_Paralelo.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria_Post3//3_Respaldo.jpg');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria_Post3//3_Respaldo.jpg" alt="3 respaldo" />
+				    </div>
+			      <figcaption>
+		          <p>3 respaldo</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria_Post3//3_Respaldo.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria_Post3//4_Armado.jpg');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria_Post3//4_Armado.jpg" alt="4 armado" />
+				    </div>
+			      <figcaption>
+		          <p>4 armado</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria_Post3//4_Armado.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria_Post3//5_Silla.jpg');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria_Post3//5_Silla.jpg" alt="5 silla" />
+				    </div>
+			      <figcaption>
+		          <p>5 silla</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria_Post3//5_Silla.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://francabezas.github.io/img/Post3/Galeria_Post3//6_Silla.jpg');" >
+				      <img itemprop="thumbnail" src="https://francabezas.github.io/img/Post3/Galeria_Post3//6_Silla.jpg" alt="6 silla" />
+				    </div>
+			      <figcaption>
+		          <p>6 silla</p>
+			      </figcaption>
+				    <a href="https://francabezas.github.io/img/Post3/Galeria_Post3//6_Silla.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+</p>
+<hr>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
